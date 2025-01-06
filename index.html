@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProviMap - Lycée des métiers</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="/assets/logo_providence.png" alt="Logo La Providence" class="logo">
+            <h1>Lycée La Providence - Plan des Salles</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="map-container">
+            <img src="/assets/BatC_Map.jpg" alt="Plan du Bâtiment C" usemap="#image-map" class="rotated-map">
+
+            <map name="image-map">
+                <area id="salle-nautilus" alt="Salle de classe (Nautilus)" title="Salle de classe (Nautilus)" href=""
+                    coords="155,88,154,19,228,18,229,88" shape="poly">
+                <area id="salle-tour-perret" alt="Salle de classe (Tour Perret)" title="Salle de classe (Tour Perret)"
+                    href="" coords="57,18,131,18,131,73,117,89,73,87,57,73" shape="poly">
+                <area id="reserve" alt="Réserve" title="Réserve" href="" coords="155,88,154,114,168,127,229,127,229,88"
+                    shape="poly">
+                <area id="salle-saint-leu" alt="Salle de classe (Saint Leu)" title="Salle de classe (Saint Leu)" href=""
+                    coords="73,107,117,107,131,121,130,176,58,175,57,125" shape="poly">
+                <area id="laboratoire-science" alt="Laboratoire de science" title="Laboratoire de science" href=""
+                    coords="168,127,228,126,228,208,167,208,155,195,154,141" shape="poly">
+                <area id="salle-moulonguet" alt="Salle de classe (Moulonguet)" title="Salle de classe (Moulonguet)"
+                    href="" coords="57,174,130,176,131,207,118,219,57,219" shape="poly">
+                <area id="salle-jules-vernes" alt="Salle de classe (Jules Vernes)"
+                    title="Salle de classe (Jules Vernes)" href="" coords="118,220,57,218,57,287,131,287,132,232"
+                    shape="poly">
+                <area id="local-materiel-menage" alt="Local de matériel de ménage" title="Local de matériel de ménage"
+                    href="" coords="168,219,192,218,192,209,167,207" shape="poly">
+                <area id="sanitaire-personnel" alt="Sanitaire du personnel" title="Sanitaire du personnel" href=""
+                    coords="169,229,229,230,229,208,193,208,192,217,167,219" shape="poly">
+                <area id="local-materiel-pedagogique" alt="Local de matériel pédagogique"
+                    title="Local de matériel pédagogique" href="" coords="131,73,131,65,154,66,154,73" shape="poly">
+                <area id="salle-hippodrome" alt="Salle de classe (Hippodrome)" title="Salle de classe (Hippodrome)"
+                    href="" coords="155,274,229,275,229,230,169,230,155,243" shape="poly">
+                <area id="salle-beffroi" alt="Salle de classe (Beffroi)" title="Salle de classe (Beffroi)" href=""
+                    coords="155,328,155,274,229,276,229,341,168,342" shape="poly">
+                <area id="armoire-tgbt" alt="Armoire électrique TGBT" title="Armoire électrique TGBT" href=""
+                    coords="131,289,122,289,122,307,131,308" shape="poly">
+                <area id="bureau-directrice-etudes" alt="Bureau de la directrice des études"
+                    title="Bureau de la directrice des études" href="" coords="58,308,58,341,131,342,132,307"
+                    shape="poly">
+                <area id="salle-hortillonnage" alt="Salle de classe (Hortillonnage)"
+                    title="Salle de classe (Hortillonnage)" href=""
+                    coords="167,341,229,340,229,408,168,409,155,396,155,355" shape="poly">
+                <area id="salle-permanence" alt="Salle de permanence" title="Salle de permanence" href=""
+                    coords="58,341,131,342,131,407,57,406" shape="poly">
+                <area id="bureau-vie-scolaire" alt="Bureau de vie Scolaire" title="Bureau de vie Scolaire" href=""
+                    coords="57,406,131,408,131,440,120,453,84,451,82,419,57,418" shape="poly">
+                <area id="bureau-vie-scolaire-lebel" alt="Bureau de vie Scolaire (Mme Lebel)"
+                    title="Bureau de vie Scolaire (Mme Lebel)" href="" coords="169,447,230,446,230,409,168,409"
+                    shape="poly">
+                <area id="salle-dtl" alt="Salle de DTL" title="Salle de DTL" href=""
+                    coords="169,447,294,449,294,538,170,536,154,523,156,459" shape="poly">
+                <area id="salle-bep-electrotechnique" alt="Salle de classe des Bep Electrotechnique"
+                    title="Salle de classe des Bep Electrotechnique" href=""
+                    coords="168,538,227,537,228,592,155,591,154,551" shape="poly">
+                <area id="local-casier" alt="Local a casier" title="Local a casier" href=""
+                    coords="82,450,81,420,57,418,56,406,27,406,27,448" shape="poly">
+                <area id="magasin-bep-electrotechnique" alt="Magasin des Bep Electrotechnique"
+                    title="Magasin des Bep Electrotechnique" href="" coords="135,559,135,548,121,539,61,538,59,558"
+                    shape="poly">
+                <area id="sanitaire" alt="Sanitaire" title="Sanitaire" href="" coords="26,537,59,537,60,577,26,577"
+                    shape="poly">
+                <area id="atelier-bep-electrotechnique" alt="Atelier Bep Electrotechnique"
+                    title="Atelier Bep Electrotechnique" href="" coords="61,558,60,776,226,777,227,591,154,590,155,557"
+                    shape="poly">
+
+            </map>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const areas = document.querySelectorAll('area');  // Sélectionner toutes les zones
+                const tooltip = document.createElement('div');    // Créer une div pour la bulle
+                tooltip.classList.add('tooltip');                  // Ajouter la classe 'tooltip'
+                document.body.appendChild(tooltip);                // Ajouter la bulle au body
+
+                // Quand on survole une zone
+                areas.forEach(area => {
+                    area.addEventListener('mouseenter', function (event) {
+                        const name = area.getAttribute('data-name');  // Récupérer le nom de la salle
+                        console.log(name);  // Vérification dans la console
+                        if (name) {
+                            tooltip.innerHTML = `<h3>${name}</h3><p>Cliquez pour obtenir plus d'info</p>`;  // Mettre le contenu dans la bulle
+                            tooltip.style.display = 'block';  // Afficher la bulle
+
+                            // Positionner la bulle en fonction de la souris
+                            const rect = area.getBoundingClientRect();  // Obtenir les coordonnées de l'area
+                            tooltip.style.left = `${rect.left + window.scrollX}px`;
+                            tooltip.style.top = `${rect.top + window.scrollY + rect.height + 5}px`;
+                        } else {
+                            console.warn('Le nom de la salle est manquant sur cette zone');  // Avertir si l'attribut data-name est manquant
+                        }
+                    });
+
+                    // Quand on quitte la zone
+                    area.addEventListener('mouseleave', function () {
+                        tooltip.style.display = 'none';  // Cacher la bulle
+                    });
+                });
+            });
+        </script>
+        <section class="description">
+            <h2>Bienvenue au Bâtiment C</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod,
+                nisi nec ullamcorper vehicula, nisl quam lacinia mauris, sit amet fermentum sapien
+                quam vitae metus. Phasellus auctor, massa non viverra aliquet, urna enim tristique
+                lectus, ut pharetra sem nisi non arcu. Cras malesuada justo sed libero scelerisque,
+                et scelerisque turpis fringilla.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lycée La Providence - Tous droits réservés</p>
+    </footer>
+</body>
+
+</html>

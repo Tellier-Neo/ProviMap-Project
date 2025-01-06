@@ -1,0 +1,26 @@
+{
+    "1": {
+        "title_fr": "Salle de classe (Nautilus)",
+        "title_en": "Classroom (Nautilus)",
+        "description_fr": "",
+        "description_en": ""
+    },
+    "2": {
+        "title_fr": "Salle de classe (Tour Perret)",
+        "title_en": "Classroom (Tour Perret)",
+        "description_fr": "",
+        "description_en": ""
+    },
+    "3": {
+        "title_fr": "Réserve",
+        "title_en": "Storage Room",
+        "description_fr": "",
+        "description_en": ""
+    },
+    "4": {
+        "title_fr": "Salle de classe (Saint Leu)",
+        "title_en": "Classroom (Saint Leu)",
+        "description_fr": "",
+        "description_en": ""
+    }
+}
