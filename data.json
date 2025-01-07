@@ -1,0 +1,258 @@
+{
+    "fr": {
+        "headerTitle": "Plan du Bâtiment C - La Providence Amiens",
+        "bannerTitle": "Bienvenue sur le plan interactif du Bâtiment C",
+        "presentationText": "Le bâtiment C de la Providence à Amiens est dédié aux lycées professionnels, notamment pour la formation des élèves en électrotechnique. Il abrite un grand atelier où les étudiants en BEP Électrotechnique peuvent travailler sur des projets pratiques. Ce bâtiment est équipé de matériel moderne pour offrir aux étudiants un environnement d'apprentissage adapté aux exigences techniques du secteur.☺",
+        "footerText": "&copy; 2025 La Providence Amiens. Tous droits réservés.",
+        "rooms": {
+            "salle-nautilus": {
+                "title": "Salle de classe (Nautilus)",
+                "description": "La salle de classe est un espace dédié à l'apprentissage et à l'enseignement. Elle est conçue pour accueillir les élèves lors des cours théoriques et pratiques. Equipée de tables, de chaises, de tableaux et de matériel pédagogique, elle permet aux enseignants de dispenser leurs leçons dans un cadre propice à la concentration et à l'interaction.",
+                "image": ""
+            },
+            "salle-tour-perret": {
+                "title": "Salle de classe (Tour Perret)",
+                "description": "La salle de classe est un espace dédié à l'apprentissage et à l'enseignement. Elle est conçue pour accueillir les élèves lors des cours théoriques et pratiques. Equipée de tables, de chaises, de tableaux et de matériel pédagogique, elle permet aux enseignants de dispenser leurs leçons dans un cadre propice à la concentration et à l'interaction.",
+                "image": ""
+            },
+            "reserve": {
+                "title": "Réserve",
+                "description": "La petite réserve est un espace de stockage qui permet de ranger le matériel et les fournitures nécessaires aux cours. Elle est généralement équipée d'étagères ou de placards pour organiser les objets de manière pratique et accessible. Ce lieu sert à garder l'environnement de travail ordonné et à faciliter l'accès aux ressources nécessaires.",
+                "image": ""
+            },
+            "salle-saint-leu": {
+                "title": "Salle de classe (Saint Leu)",
+                "description": "La salle de classe est un espace dédié à l'apprentissage et à l'enseignement. Elle est conçue pour accueillir les élèves lors des cours théoriques et pratiques. Equipée de tables, de chaises, de tableaux et de matériel pédagogique, elle permet aux enseignants de dispenser leurs leçons dans un cadre propice à la concentration et à l'interaction.",
+                "image": ""
+            },
+            "laboratoire-science": {
+                "title": "Laboratoire de science",
+                "description": "Le laboratoire de sciences est un espace spécialement conçu pour les expériences et les travaux pratiques. Il est équipé de matériel scientifique, tel que des microscopes, des éprouvettes, des béchers, et des produits chimiques, permettant aux élèves de réaliser des expérimentations dans diverses disciplines scientifiques comme la physique, la chimie et la biologie. Ce lieu favorise l'apprentissage actif et la compréhension concrète des concepts scientifiques.",
+                "image": ""
+            },
+            "salle-moulonguet": {
+                "title": "Salle de classe (Moulonguet)",
+                "description": "La salle de classe est un espace dédié à l'apprentissage et à l'enseignement. Elle est conçue pour accueillir les élèves lors des cours théoriques et pratiques. Equipée de tables, de chaises, de tableaux et de matériel pédagogique, elle permet aux enseignants de dispenser leurs leçons dans un cadre propice à la concentration et à l'interaction.",
+                "image": ""
+            },
+            "salle-jules-vernes": {
+                "title": "Salle de classe (Jules Vernes)",
+                "description": "La salle de classe est un espace dédié à l'apprentissage et à l'enseignement. Elle est conçue pour accueillir les élèves lors des cours théoriques et pratiques. Equipée de tables, de chaises, de tableaux et de matériel pédagogique, elle permet aux enseignants de dispenser leurs leçons dans un cadre propice à la concentration et à l'interaction.",
+                "image": ""
+            },
+            "local-materiel-menage": {
+                "title": "Local de matériel de ménage",
+                "description": "Le local de matériel de ménage est un espace réservé au rangement des produits et outils nécessaires pour l'entretien des locaux. Il contient généralement des balais, serpillières, seaux, produits de nettoyage et autres équipements utilisés pour maintenir la propreté des espaces.",
+                "image": ""
+            },
+            "sanitaire-personnel": {
+                "title": "Sanitaire du personnel",
+                "description": "Les sanitaires du personnel sont des installations réservées aux employés pour leurs besoins de confort et d'hygiène. Ils sont généralement équipés de toilettes, lavabos",
+                "image": ""
+            },
+            "local-materiel-pedagogique": {
+                "title": "Local de matériel pédagogique",
+                "description": "Le local de matériel pédagogique est un espace de stockage dédié aux ressources et supports utilisés pour l'enseignement. Il contient des manuels, des outils pédagogiques, des documents et des fournitures nécessaires pour soutenir les activités éducatives et faciliter l'apprentissage des élèves.",
+                "image": ""
+            },
+            "salle-hippodrome": {
+                "title": "Salle de classe (Hippodrome)",
+                "description": "La salle de classe est un espace dédié à l'apprentissage et à l'enseignement. Elle est conçue pour accueillir les élèves lors des cours théoriques et pratiques. Equipée de tables, de chaises, de tableaux et de matériel pédagogique, elle permet aux enseignants de dispenser leurs leçons dans un cadre propice à la concentration et à l'interaction.",
+                "image": ""
+            },
+            "salle-beffroi": {
+                "title": "Salle de classe (Beffroi)",
+                "description": "La salle de classe est un espace dédié à l'apprentissage et à l'enseignement. Elle est conçue pour accueillir les élèves lors des cours théoriques et pratiques. Equipée de tables, de chaises, de tableaux et de matériel pédagogique, elle permet aux enseignants de dispenser leurs leçons dans un cadre propice à la concentration et à l'interaction.",
+                "image": ""
+            },
+            "armoire-tgbt": {
+                "title": "Armoire électrique TGBT",
+                "description": "L'armoire électrique TGBT (Tableau Général Basse Tension) est un dispositif centralisé permettant de gérer et de distribuer l'électricité dans un bâtiment. Elle contient les équipements nécessaires pour assurer la protection, le contrôle et la distribution de l'énergie électrique vers les différentes installations du bâtiment, tout en garantissant la sécurité des circuits.",
+                "image": ""
+            },
+            "bureau-directrice-etudes": {
+                "title": "Bureau de la directrice des études",
+                "description": "Le bureau de la directrice des études est un espace privé réservé à la gestion administrative et pédagogique. C'est là que la directrice coordonne les activités scolaires, gère les emplois du temps, et soutient les enseignants et les élèves dans leurs démarches académiques. Le bureau est souvent équipé de meubles fonctionnels tels qu'un bureau, des étagères et un ordinateur.",
+                "image": ""
+            },
+            "salle-hortillonnage": {
+                "title": "Salle de classe (Hortillonnage)",
+                "description": "La salle de classe est un espace dédié à l'apprentissage et à l'enseignement. Elle est conçue pour accueillir les élèves lors des cours théoriques et pratiques. Equipée de tables, de chaises, de tableaux et de matériel pédagogique, elle permet aux enseignants de dispenser leurs leçons dans un cadre propice à la concentration et à l'interaction.",
+                "image": ""
+            },
+            "salle-permanence": {
+                "title": "Salle de permanence",
+                "description": "La salle de permanence est un espace où les élèves peuvent travailler de manière autonome en dehors de leurs heures de cours. Elle est supervisée par un membre du personnel, offrant ainsi un environnement calme et organisé pour la révision, l'étude ou la réalisation de devoirs.",
+                "image": ""
+            },
+            "bureau-vie-scolaire": {
+                "title": "Bureau de vie Scolaire",
+                "description": "Le bureau de la vie scolaire est l'endroit où sont gérées les activités administratives liées à la vie des élèves, telles que les absences, les retards, ou les demandes de congés. C’est également le lieu où les élèves peuvent se rendre pour toute question concernant la discipline, le comportement ou des préoccupations personnelles, avec le soutien du personnel de vie scolaire.",
+                "image": ""
+            },
+            "bureau-vie-scolaire-lebel": {
+                "title": "Bureau de vie Scolaire (Mme Lebel)",
+                "description": "Le bureau de la vie scolaire de Mme Lebel est un espace dédié à la gestion des questions administratives et disciplinaires des élèves. C'est là que Mme Lebel s'occupe des absences, des retards, des problèmes de comportement et des demandes particulières des élèves. Les élèves peuvent également y aller pour discuter de préoccupations personnelles, avec le soutien de la vie scolaire.",
+                "image": ""
+            },
+            "salle-dtl": {
+                "title": "Salle de DTL",
+                "description": "La salle de DTL (pour les examens) est un espace dédié exclusivement aux contrôles et évaluations. Elle est aménagée de manière à offrir une table par élève, afin de garantir un environnement calme et propice à la concentration. Les élèves passent leurs examens dans cette grande salle, avec suffisamment d'espace pour leur permettre de travailler de manière indépendante.",
+                "image": ""
+            },
+            "salle-bep-electrotechnique": {
+                "title": "Salle de classe des Bep Electrotechnique",
+                "description": "La salle de classe des BEP Électrotechnique est un espace conçu pour l'enseignement théorique et pratique des élèves dans le domaine de l'électrotechnique. Elle est équipée de supports pédagogiques adaptés, tels que des tableaux, des supports multimédia, et parfois des maquettes ou des équipements électriques spécifiques pour aider les étudiants à mieux comprendre les concepts techniques.",
+                "image": ""
+            },
+            "local-casier": {
+                "title": "Local à casier",
+                "description": "Le local à casiers est un espace dédié au rangement des affaires personnelles des élèves. Chaque élève dispose d'un casier individuel pour y entreposer ses effets personnels, tels que des livres, des vêtements, ou des objets de valeur, en toute sécurité.",
+                "image": ""
+            },
+            "magasin-bep-electrotechnique": {
+                "title": "Magasin des Bep Electrotechnique",
+                "description": "Le magasin des BEP Électrotechnique est un espace de stockage et de préparation du matériel nécessaire aux formations pratiques des élèves. Il contient divers équipements, outils, et composants électroniques que les étudiants utilisent dans le cadre de leurs travaux pratiques en électrotechnique, permettant ainsi une mise en application concrète des compétences acquises en classe.",
+                "image": ""
+            },
+            "sanitaire": {
+                "title": "Sanitaire",
+                "description": "Les sanitaires sont des installations sanitaires comprenant des toilettes, des lavabos et parfois des douches. Ils sont mis à la disposition des élèves, du personnel et des visiteurs pour assurer leur confort et leur hygiène dans le cadre de leurs activités quotidiennes.",
+                "image": ""
+            },
+            "atelier-bep-electrotechnique": {
+                "title": "Atelier Bep Electrotechnique",
+                "description": "L'atelier des BEP Électrotechnique est un espace dédié à la pratique et à l'application des compétences acquises par les étudiants dans le domaine de l'électrotechnique. Il est équipé de divers appareils, outils et installations permettant aux élèves de réaliser des travaux pratiques, comme le montage de circuits électriques, la maintenance d'équipements, ou l'analyse de systèmes électromécaniques.",
+                "image": ""
+            }
+        }
+    },
+    "en": {
+        "headerTitle": "Building C Map - La Providence Amiens",
+        "bannerTitle": "Welcome to the interactive map of Building C",
+        "presentationText": "Building C at La Providence in Amiens is dedicated to vocational high school students, particularly those studying electrotechnics. It houses a large workshop where students in the BEP Electrotechnics program can work on practical projects. The building is equipped with modern equipment to provide students with a learning environment tailored to the technical requirements of the industry.",
+        "footerText": "&copy; 2025 La Providence Amiens. All rights reserved.",
+        "rooms": {
+            "salle-nautilus": {
+                "title": "Classroom (Nautilus)",
+                "description": "The classroom is a space dedicated to learning and teaching. It is designed to accommodate students during theoretical and practical lessons. Equipped with desks, chairs, boards, and educational materials, it allows teachers to deliver their lessons in an environment conducive to concentration and interaction.",
+                "image": ""
+            },
+            "salle-tour-perret": {
+                "title": "Classroom (Tour Perret)",
+                "description": "The classroom is a space dedicated to learning and teaching. It is designed to accommodate students during theoretical and practical lessons. Equipped with desks, chairs, boards, and educational materials, it allows teachers to deliver their lessons in an environment conducive to concentration and interaction.",
+                "image": ""
+            },
+            "reserve": {
+                "title": "Reserve",
+                "description": "The small storage room is a space used to store materials and supplies needed for lessons. It is typically equipped with shelves or cabinets to organize items in a practical and accessible way. This area helps maintain an orderly work environment and facilitates easy access to necessary resources.",
+                "image": ""
+            },
+            "salle-saint-leu": {
+                "title": "Classroom (Saint Leu)",
+                "description": "The classroom is a space dedicated to learning and teaching. It is designed to accommodate students during theoretical and practical lessons. Equipped with desks, chairs, boards, and educational materials, it allows teachers to deliver their lessons in an environment conducive to concentration and interaction.",
+                "image": ""
+            },
+            "laboratoire-science": {
+                "title": "Science Laboratory",
+                "description": "The science laboratory is a space specifically designed for experiments and hands-on activities. It is equipped with scientific tools such as microscopes, test tubes, beakers, and chemicals, allowing students to conduct experiments in various scientific fields like physics, chemistry, and biology. This space promotes active learning and a hands-on understanding of scientific concepts.",
+                "image": ""
+            },
+            "salle-moulonguet": {
+                "title": "Classroom (Moulonguet)",
+                "description": "The classroom is a space dedicated to learning and teaching. It is designed to accommodate students during theoretical and practical lessons. Equipped with desks, chairs, boards, and educational materials, it allows teachers to deliver their lessons in an environment conducive to concentration and interaction.",
+                "image": ""
+            },
+            "salle-jules-vernes": {
+                "title": "Classroom (Jules Vernes)",
+                "description": "The classroom is a space dedicated to learning and teaching. It is designed to accommodate students during theoretical and practical lessons. Equipped with desks, chairs, boards, and educational materials, it allows teachers to deliver their lessons in an environment conducive to concentration and interaction.",
+                "image": ""
+            },
+            "local-materiel-menage": {
+                "title": "Cleaning Material Room",
+                "description": "The cleaning supplies room is a space designated for storing products and tools needed for maintaining the premises. It typically contains brooms, mops, buckets, cleaning products, and other equipment used to keep the spaces clean.",
+                "image": ""
+            },
+            "sanitaire-personnel": {
+                "title": "Staff Restroom",
+                "description": "The staff restroom is a facility reserved for employees' comfort and hygiene needs. It typically includes toilets, sinks",
+                "image": ""
+            },
+            "local-materiel-pedagogique": {
+                "title": "Teaching Material Room",
+                "description": "The educational materials room is a storage space dedicated to the resources and tools used for teaching. It contains textbooks, teaching aids, documents, and supplies necessary to support educational activities and facilitate student learning.",
+                "image": ""
+            },
+            "salle-hippodrome": {
+                "title": "Classroom (Hippodrome)",
+                "description": "The classroom is a space dedicated to learning and teaching. It is designed to accommodate students during theoretical and practical lessons. Equipped with desks, chairs, boards, and educational materials, it allows teachers to deliver their lessons in an environment conducive to concentration and interaction.",
+                "image": ""
+            },
+            "salle-beffroi": {
+                "title": "Classroom (Beffroi)",
+                "description": "The classroom is a space dedicated to learning and teaching. It is designed to accommodate students during theoretical and practical lessons. Equipped with desks, chairs, boards, and educational materials, it allows teachers to deliver their lessons in an environment conducive to concentration and interaction.",
+                "image": ""
+            },
+            "armoire-tgbt": {
+                "title": "TGBT Electrical Cabinet",
+                "description": "The TGBT (Low Voltage Main Distribution Board) is a centralized device used to manage and distribute electricity within a building. It houses the necessary equipment to ensure the protection, control, and distribution of electrical power to various installations within the building, while ensuring the safety of the circuits.",
+                "image": ""
+            },
+            "bureau-directrice-etudes": {
+                "title": "Director of Studies Office",
+                "description": "The study director's office is a private space dedicated to administrative and educational management. It is where the director coordinates school activities, manages schedules, and supports teachers and students in their academic tasks. The office is typically furnished with functional items such as a desk, shelves, and a computer.",
+                "image": ""
+            },
+            "salle-hortillonnage": {
+                "title": "Classroom (Hortillonnage)",
+                "description": "The classroom is a space dedicated to learning and teaching. It is designed to accommodate students during theoretical and practical lessons. Equipped with desks, chairs, boards, and educational materials, it allows teachers to deliver their lessons in an environment conducive to concentration and interaction.",
+                "image": ""
+            },
+            "salle-permanence": {
+                "title": "Study Room",
+                "description": "The study hall is a space where students can work independently outside of their class hours. It is supervised by a staff member, providing a calm and organized environment for revision, studying, or completing assignments.",
+                "image": ""
+            },
+            "bureau-vie-scolaire": {
+                "title": "School Life Office",
+                "description": "The school life office is where administrative activities related to students' daily life are managed, such as absences, tardiness, or leave requests. It is also where students can go for any questions regarding discipline, behavior, or personal concerns, with support from the school life staff.",
+                "image": ""
+            },
+            "bureau-vie-scolaire-lebel": {
+                "title": "School Life Office (Mme Lebel)",
+                "description": "Mme Lebel's school life office is a space dedicated to managing students' administrative and disciplinary matters. It is where Mme Lebel handles absences, tardiness, behavioral issues, and special requests from students. Students can also go there to discuss personal concerns with support from the school life staff.",
+                "image": ""
+            },
+            "salle-dtl": {
+                "title": "DTL Room",
+                "description": "The DTL room (for exams) is a space dedicated solely to tests and assessments. It is arranged to provide one desk per student, ensuring a quiet and focused environment. Students take their exams in this large room, with ample space to work independently.",
+                "image": ""
+            },
+            "salle-bep-electrotechnique": {
+                "title": "Classroom for Bep Electrotechnics",
+                "description": "The BEP Electrotechnics classroom is a space designed for theoretical and practical lessons for students in the field of electrotechnics. It is equipped with appropriate educational resources such as boards, multimedia tools, and sometimes models or specific electrical equipment to help students better understand technical concepts.",
+                "image": ""
+            },
+            "local-casier": {
+                "title": "Locker Room",
+                "description": "The locker room is a space dedicated to storing students' personal belongings. Each student has an individual locker to store their personal items, such as books, clothes, or valuables, safely.",
+                "image": ""
+            },
+            "magasin-bep-electrotechnique": {
+                "title": "Bep Electrotechnics Store",
+                "description": "The BEP Electrotechnics workshop is a storage and preparation area for the materials needed for the students' practical training. It contains various equipment, tools, and electronic components that students use in their practical work in electrotechnics, enabling them to apply the skills learned in class.",
+                "image": ""
+            },
+            "sanitaire": {
+                "title": "Restroom",
+                "description": "The restrooms are sanitary facilities that include toilets, sinks, and sometimes showers. They are provided for students, staff, and visitors to ensure their comfort and hygiene during their daily activities.",
+                "image": ""
+            },
+            "atelier-bep-electrotechnique": {
+                "title": "Bep Electrotechnics Workshop",
+                "description": "The BEP Electrotechnics workshop is a space dedicated to the practical application of skills acquired by students in the field of electrotechnics. It is equipped with various devices, tools, and installations that allow students to carry out practical work, such as assembling electrical circuits, maintaining equipment, or analyzing electromechanical systems.",
+                "image": ""
+            }
+        }
+    }
+}

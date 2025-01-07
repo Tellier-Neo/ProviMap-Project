@@ -1,154 +1,215 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan du Bâtiment C - La Providence Amiens</title>
     <link rel="stylesheet" href="style.css">
+  <script>
+    let currentLanguage = 'fr';
+let data;
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('data.json')
+        .then(response => response.json())
+        .then(json => {
+            data = json;
+            loadContent();
+        });
+});
+
+function loadContent() {
+    document.getElementById('header-title').innerText = data[currentLanguage].headerTitle;
+    document.getElementById('banner-title').innerText = data[currentLanguage].bannerTitle;
+    document.getElementById('presentation-text').innerText = data[currentLanguage].presentationText;
+    document.getElementById('footer-text').innerHTML = data[currentLanguage].footerText;
+
+    // Add event listeners to map areas
+    const areas = document.querySelectorAll('map area');
+    areas.forEach(area => {
+        area.addEventListener('click', (event) => {
+            event.preventDefault();
+            showModal(area.id);
+        });
+    });
+}
+
+function switchLanguage(lang) {
+    currentLanguage = lang;
+    loadContent();
+}
+
+function showModal(roomId) {
+    const room = data[currentLanguage].rooms[roomId];
+    document.getElementById('modal-title').innerText = room.title;
+    document.getElementById('modal-description').innerText = room.description;
+    document.getElementById('modal-image').src = room.image;
+
+    document.getElementById('modal').style.display = 'block';
+    document.getElementById('modal-overlay').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+    document.getElementById('modal-overlay').style.display = 'none';
+}
+  </script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f4f4f4;
-        }
+  /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-        header {
-            width: 100%;
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
+/* Header Styles */
+header {
+    background-color: #004a99;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-        header .logo img {
-            min-width: none;
-            max-width: 400px;
-            height: auto;
-        }
+header .logo img {
+    max-width: 100px;
+    height: auto;
+}
 
-        h1 {
-            margin: 10px 0;
-            font-size: 24px;
-        }
+header h1 {
+    margin: 10px 0;
+    font-size: 24px;
+}
 
-        .language-switch {
-            margin-top: 10px;
-        }
+header .language-switch {
+    margin-top: 10px;
+}
 
-        .language-switch button {
-            background-color: #f1f1f1;
-            border: none;
-            padding: 5px 10px;
-            margin: 0 5px;
-            cursor: pointer;
-        }
+header .language-switch button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
-        .banner {
-            width: 100%;
-            background-color: #ffcc00;
-            padding: 20px;
-            text-align: center;
-        }
+header .language-switch button:hover {
+    background-color: #0056b3;
+}
 
-        .presentation {
-            margin: 20px;
-            text-align: center;
-            max-width: 800px;
-        }
+/* Banner Styles */
+.banner {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-        .map-container {
-            position: relative;
-            width: 100%;
-            max-width: 100%;
-            /* Limite la largeur du conteneur pour une meilleure gestion sur grands écrans */
-            margin: 20px auto;
-            /* Centrage horizontal avec un peu d'espace autour */
-            background-color: #ffffff;
-            /* Fond blanc */
-            border-radius: 15px;
-            /* Bordures arrondies */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            /* Ombre portée pour un effet de profondeur */
-            padding: 20px;
-            /* Espacement interne */
-            text-align: center;
-            overflow: hidden;
-            /* Masque tout ce qui dépasse du conteneur */
-            position: relative;
-        }
+.banner h2 {
+    margin: 0;
+    font-size: 20px;
+}
 
-        .rotated-map {
-            width: fit-content;
-            max-width: fit-content;
-            /* Limite la largeur de la carte pour qu'elle soit plus petite sur de grands écrans */
-            transform: rotate(-90deg);
-            transform-origin: center center;
-            transition: transform 0.3s ease;
-            /* Transition douce pour les rotations */
-        }
+/* Presentation Styles */
+.presentation {
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        /* Optionnel : Ajouter un effet au survol de la carte */
-        .map-container:hover .rotated-map {
-            transform: rotate(-90deg) scale(1.05);
-            /* Légère agrandissement au survol */
-        }
+/* Map Container Styles */
+.map-container {
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 5%;
+}
 
-        /* Optionnel : Ajouter un overlay semi-transparent */
-        .map-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.2);
-            /* Superposition sombre */
-            border-radius: 15px;
-            /* Assurer que l'overlay suit les bords arrondis */
-            pointer-events: none;
-            /* Permet de cliquer à travers l'overlay */
-            transition: background 0.3s ease;
-            /* Transition douce pour l'overlay */
-        }
+.map-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        .map-container:hover::before {
-            background: rgba(0, 0, 0, 0.3);
-            /* Plus sombre au survol */
-        }
+/* Footer Styles */
+footer {
+    background-color: #004a99;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
-        footer {
-            background-color: #003366;
-            color: white;
-            width: 100%;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 40px;
-        }
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
 
-        map area {
-            outline: 2px solid transparent;
-            transition: outline 0.2s ease-in-out;
-        }
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+}
 
-        map area:hover {
-            outline: 2px solid #ffcc00;
-        }
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal h2 {
+    margin-top: 0;
+}
+
+.modal img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.modal button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.modal button:hover {
+    background-color: #0056b3;
+}
     </style>
 </head>
-
 <body>
-
     <!-- En-tête -->
     <header>
-        <div class="logo">
-            <img src="assets/logo.jpg" alt="Logo de La Providence" />
-        </div>
-        <h1>Plan du Bâtiment C - La Providence Amiens</h1>
+        
+        <h1 id="header-title">Plan du Bâtiment C - La Providence Amiens</h1>
         <div class="language-switch">
             <button id="lang-fr" onclick="switchLanguage('fr')">FR</button>
             <button id="lang-en" onclick="switchLanguage('en')">EN</button>
@@ -157,80 +218,60 @@
 
     <!-- Bannière -->
     <section class="banner">
-        <h2>Bienvenue sur le plan interactif du Bâtiment C</h2>
+        <h2 id="banner-title">Bienvenue sur le plan interactif du Bâtiment C</h2>
     </section>
 
     <!-- Présentation -->
     <section class="presentation">
-        <p>Le Bâtiment C de La Providence à Amiens est un espace moderne et fonctionnel pour nos élèves et notre
-            personnel. Vous pouvez explorer différentes salles et zones grâce à la carte interactive ci-dessous.</p>
+        <p id="presentation-text">Le Bâtiment C de La Providence à Amiens est un espace moderne et fonctionnel pour nos élèves et notre personnel. Vous pouvez explorer différentes salles et zones grâce à la carte interactive ci-dessous.</p>
     </section>
 
     <!-- Carte Interactive -->
     <section class="map-container">
         <img src="assets/BatC_Map.jpg" alt="Plan du Bâtiment C" usemap="#image-map" class="rotated-map">
         <map name="image-map">
-            <area id="salle-nautilus" alt="Salle de classe (Nautilus)" title="Salle de classe (Nautilus)"
-                coords="155,88,154,19,228,18,229,88" shape="poly">
-            <area id="salle-tour-perret" alt="Salle de classe (Tour Perret)" title="Salle de classe (Tour Perret)"
-               coords="57,18,131,18,131,73,117,89,73,87,57,73" shape="poly">
-            <area id="reserve" alt="Réserve" title="Réserve"  coords="155,88,154,114,168,127,229,127,229,88"
-                shape="poly">
-            <area id="salle-saint-leu" alt="Salle de classe (Saint Leu)" title="Salle de classe (Saint Leu)" 
-                coords="73,107,117,107,131,121,130,176,58,175,57,125" shape="poly">
-            <area id="laboratoire-science" alt="Laboratoire de science" title="Laboratoire de science" 
-                coords="168,127,228,126,228,208,167,208,155,195,154,141" shape="poly">
-            <area id="salle-moulonguet" alt="Salle de classe (Moulonguet)" title="Salle de classe (Moulonguet)" 
-                coords="57,174,130,176,131,207,118,219,57,219" shape="poly">
-            <area id="salle-jules-vernes" alt="Salle de classe (Jules Vernes)" title="Salle de classe (Jules Vernes)"
-               coords="118,220,57,218,57,287,131,287,132,232" shape="poly">
-            <area id="local-materiel-menage" alt="Local de matériel de ménage" title="Local de matériel de ménage"
-                 coords="168,219,192,218,192,209,167,207" shape="poly">
-            <area id="sanitaire-personnel" alt="Sanitaire du personnel" title="Sanitaire du personnel" 
-                coords="169,229,229,230,229,208,193,208,192,217,167,219" shape="poly">
-            <area id="local-materiel-pedagogique" alt="Local de matériel pédagogique"
-                title="Local de matériel pédagogique" coords="131,73,131,65,154,66,154,73" shape="poly">
-            <area id="salle-hippodrome" alt="Salle de classe (Hippodrome)" title="Salle de classe (Hippodrome)" 
-                coords="155,274,229,275,229,230,169,230,155,243" shape="poly">
-            <area id="salle-beffroi" alt="Salle de classe (Beffroi)" title="Salle de classe (Beffroi)"
-                coords="155,328,155,274,229,276,229,341,168,342" shape="poly">
-            <area id="armoire-tgbt" alt="Armoire électrique TGBT" title="Armoire électrique TGBT" 
-                coords="131,289,122,289,122,307,131,308" shape="poly">
-            <area id="bureau-directrice-etudes" alt="Bureau de la directrice des études"
-                title="Bureau de la directrice des études"  coords="58,308,58,341,131,342,132,307" shape="poly">
-            <area id="salle-hortillonnage" alt="Salle de classe (Hortillonnage)" title="Salle de classe (Hortillonnage)"
-                 coords="167,341,229,340,229,408,168,409,155,396,155,355" shape="poly">
-            <area id="salle-permanence" alt="Salle de permanence" title="Salle de permanence" 
-                coords="58,341,131,342,131,407,57,406" shape="poly">
-            <area id="bureau-vie-scolaire" alt="Bureau de vie Scolaire" title="Bureau de vie Scolaire" 
-                coords="57,406,131,408,131,440,120,453,84,451,82,419,57,418" shape="poly">
-            <area id="bureau-vie-scolaire-lebel" alt="Bureau de vie Scolaire (Mme Lebel)"
-                title="Bureau de vie Scolaire (Mme Lebel)"  coords="169,447,230,446,230,409,168,409"
-                shape="poly">
-            <area id="salle-dtl" alt="Salle de DTL" title="Salle de DTL" 
-                coords="169,447,294,449,294,538,170,536,154,523,156,459" shape="poly">
-            <area id="salle-bep-electrotechnique" alt="Salle de classe des Bep Electrotechnique"
-                title="Salle de classe des Bep Electrotechnique" 
-                coords="168,538,227,537,228,592,155,591,154,551" shape="poly">
-            <area id="local-casier" alt="Local à casier" title="Local à casier" 
-                coords="82,450,81,420,57,418,56,406,27,406,27,448" shape="poly">
-            <area id="magasin-bep-electrotechnique" alt="Magasin des Bep Electrotechnique"
-                title="Magasin des Bep Electrotechnique"  coords="135,559,135,548,121,539,61,538,59,558"
-                shape="poly">
-            <area id="sanitaire" alt="Sanitaire" title="Sanitaire" coords="26,537,59,537,60,577,26,577"
-                shape="poly">
-            <area id="atelier-bep-electrotechnique" alt="Atelier Bep Electrotechnique"
-                title="Atelier Bep Electrotechnique"  coords="61,558,60,776,226,777,227,591,154,590,155,557"
-                shape="poly">
+            <area id="salle-nautilus" alt="Salle de classe (Nautilus)" title="Salle de classe (Nautilus)" href="" coords="155,88,154,19,228,18,229,88" shape="poly">
+            <area id="salle-tour-perret" alt="Salle de classe (Tour Perret)" title="Salle de classe (Tour Perret)" href="" coords="57,18,131,18,131,73,117,89,73,87,57,73" shape="poly">
+            <area id="reserve" alt="Réserve" title="Réserve" href="" coords="155,88,154,114,168,127,229,127,229,88" shape="poly">
+            <area id="salle-saint-leu" alt="Salle de classe (Saint Leu)" title="Salle de classe (Saint Leu)" href="" coords="73,107,117,107,131,121,130,176,58,175,57,125" shape="poly">
+            <area id="laboratoire-science" alt="Laboratoire de science" title="Laboratoire de science" href="" coords="168,127,228,126,228,208,167,208,155,195,154,141" shape="poly">
+            <area id="salle-moulonguet" alt="Salle de classe (Moulonguet)" title="Salle de classe (Moulonguet)" href="" coords="57,174,130,176,131,207,118,219,57,219" shape="poly">
+            <area id="salle-jules-vernes" alt="Salle de classe (Jules Vernes)" title="Salle de classe (Jules Vernes)" href="" coords="118,220,57,218,57,287,131,287,132,232" shape="poly">
+            <area id="local-materiel-menage" alt="Local de matériel de ménage" title="Local de matériel de ménage" href="" coords="168,219,192,218,192,209,167,207" shape="poly">
+            <area id="sanitaire-personnel" alt="Sanitaire du personnel" title="Sanitaire du personnel" href="" coords="169,229,229,230,229,208,193,208,192,217,167,219" shape="poly">
+            <area id="local-materiel-pedagogique" alt="Local de matériel pédagogique" title="Local de matériel pédagogique" href="" coords="131,73,131,65,154,66,154,73" shape="poly">
+            <area id="salle-hippodrome" alt="Salle de classe (Hippodrome)" title="Salle de classe (Hippodrome)" href="" coords="155,274,229,275,229,230,169,230,155,243" shape="poly">
+            <area id="salle-beffroi" alt="Salle de classe (Beffroi)" title="Salle de classe (Beffroi)" href="" coords="155,328,155,274,229,276,229,341,168,342" shape="poly">
+            <area id="armoire-tgbt" alt="Armoire électrique TGBT" title="Armoire électrique TGBT" href="" coords="131,289,122,289,122,307,131,308" shape="poly">
+            <area id="bureau-directrice-etudes" alt="Bureau de la directrice des études" title="Bureau de la directrice des études" href="" coords="58,308,58,341,131,342,132,307" shape="poly">
+            <area id="salle-hortillonnage" alt="Salle de classe (Hortillonnage)" title="Salle de classe (Hortillonnage)" href="" coords="167,341,229,340,229,408,168,409,155,396,155,355" shape="poly">
+            <area id="salle-permanence" alt="Salle de permanence" title="Salle de permanence" href="" coords="58,341,131,342,131,407,57,406" shape="poly">
+            <area id="bureau-vie-scolaire" alt="Bureau de vie Scolaire" title="Bureau de vie Scolaire" href="" coords="57,406,131,408,131,440,120,453,84,451,82,419,57,418" shape="poly">
+            <area id="bureau-vie-scolaire-lebel" alt="Bureau de vie Scolaire (Mme Lebel)" title="Bureau de vie Scolaire (Mme Lebel)" href="" coords="169,447,230,446,230,409,168,409" shape="poly">
+            <area id="salle-dtl" alt="Salle de DTL" title="Salle de DTL" href="" coords="169,447,294,449,294,538,170,536,154,523,156,459" shape="poly">
+            <area id="salle-bep-electrotechnique" alt="Salle de classe des Bep Electrotechnique" title="Salle de classe des Bep Electrotechnique" href="" coords="168,538,227,537,228,592,155,591,154,551" shape="poly">
+            <area id="local-casier" alt="Local à casier" title="Local à casier" href="" coords="82,450,81,420,57,418,56,406,27,406,27,448" shape="poly">
+            <area id="magasin-bep-electrotechnique" alt="Magasin des Bep Electrotechnique" title="Magasin des Bep Electrotechnique" href="" coords="135,559,135,548,121,539,61,538,59,558" shape="poly">
+            <area id="sanitaire" alt="Sanitaire" title="Sanitaire" href="" coords="26,537,59,537,60,577,26,577" shape="poly">
+            <area id="atelier-bep-electrotechnique" alt="Atelier Bep Electrotechnique" title="Atelier Bep Electrotechnique" href="" coords="61,558,60,776,226,777,227,591,154,590,155,557" shape="poly">
+
         </map>
     </section>
 
+    <!-- Pop-up Modal -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal" id="modal">
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="Room Image">
+        <p id="modal-description"></p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 La Providence Amiens. Tous droits réservés.</p>
+        <p id="footer-text">&copy; 2025 La Providence Amiens. Tous droits réservés.</p>
     </footer>
 
-    <script src="scripts.js"></script>
-</body>
 
+</body>
 </html>
